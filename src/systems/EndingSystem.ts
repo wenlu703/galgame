@@ -170,8 +170,8 @@ class EndingSystemClass {
           const cs = affinityState.characterStates[ending.characterId]
           if (!cs) break
           const config = characterDB.getConfig(ending.characterId)
-          // Normal End: 好感度≥200（恋人阶段）
-          if (cs.affinity >= 200) {
+          // Normal End: 好感度≥81（情感顶点阶段）
+          if (cs.affinity >= 81) {
             candidates.push({
               ending,
               priority: 60,
@@ -182,7 +182,7 @@ class EndingSystemClass {
         }
         case 'friendship': {
           // 友情结局：兜底，没有角色达到 Normal End 条件
-          const hasRomance = summary.some((s) => s.affinity >= 200)
+          const hasRomance = summary.some((s) => s.affinity >= 81)
           if (!hasRomance) {
             candidates.push({
               ending,
@@ -251,7 +251,7 @@ class EndingSystemClass {
   getEndingTitle(): string {
     const summary = this.getAffinitySummary()
     const top = summary[0]
-    if (!top || top.affinity < 200) return '友情结局'
+    if (!top || top.affinity < 81) return '友情结局'
     const config = characterDB.getConfig(top.characterId)
     if (top.affinity >= 400) return `${config?.name ?? top.characterId} — True End`
     return `${config?.name ?? top.characterId} — Normal End`

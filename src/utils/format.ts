@@ -53,7 +53,7 @@ export function formatNumber(num: number): string {
 /**
  * 关系阶段索引 → 中文显示名
  */
-const STATUS_NAMES = ['陌生人', '相识', '朋友', '好友', '亲密', '恋人']
+const STATUS_NAMES = ['陌生', '初见', '相识', '相知', '情感顶点']
 
 export function getRelationshipName(index: number): string {
   return STATUS_NAMES[Math.min(index, STATUS_NAMES.length - 1)] ?? '未知'

@@ -33,8 +33,8 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['烹饪', '园艺', '猫', '古典音乐'],
     dislikes: ['吵闹', '暴力'],
     specialEvents: [
-      { name: '樱花树下的约定', requireAffinity: 150, labelId: 'event_lingyin_cherry' },
-      { name: '亲手做的便当', requireAffinity: 80, labelId: 'event_lingyin_bento' },
+      { name: '樱花树下的约定', requireAffinity: 15, labelId: 'event_lingyin_cherry' },
+      { name: '亲手做的便当', requireAffinity: 8, labelId: 'event_lingyin_bento' },
     ],
   },
   {
@@ -52,7 +52,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['读书', '围棋', '红茶', '雨天'],
     dislikes: ['愚蠢的问题', '浪费时间'],
     specialEvents: [
-      { name: '雨天的图书室', requireAffinity: 120, labelId: 'event_shigure_rain' },
+      { name: '雨天的图书室', requireAffinity: 12, labelId: 'event_shigure_rain' },
     ],
   },
   {
@@ -69,7 +69,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['运动', '甜食', '可爱的东西', '祭典'],
     dislikes: ['学习', '沉闷的气氛'],
     specialEvents: [
-      { name: '夏日祭典', requireAffinity: 100, labelId: 'event_sakura_festival' },
+      { name: '夏日祭典', requireAffinity: 10, labelId: 'event_sakura_festival' },
     ],
   },
   {
@@ -102,7 +102,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['辣味食物', '格斗游戏', '猫'],
     dislikes: ['被人看穿心思', '纳豆'],
     specialEvents: [
-      { name: '小时候的约定', requireAffinity: 130, labelId: 'event_akane_promise' },
+      { name: '小时候的约定', requireAffinity: 13, labelId: 'event_akane_promise' },
     ],
   },
   {
@@ -149,7 +149,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['月亮', '烟', '爵士', '维也纳咖啡'],
     dislikes: ['光明', '人群'],
     specialEvents: [
-      { name: '月下的约定', requireAffinity: 200, labelId: 'event_kuro_moon' },
+      { name: '月下的约定', requireAffinity: 20, labelId: 'event_kuro_moon' },
     ],
   },
 
@@ -200,7 +200,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['画画', '美术馆', '雨天', '猫'],
     dislikes: ['被人盯着看', '社交'],
     specialEvents: [
-      { name: '画中的秘密', requireAffinity: 150, labelId: 'event_mizuki_painting' },
+      { name: '画中的秘密', requireAffinity: 15, labelId: 'event_mizuki_painting' },
     ],
   },
   {
@@ -293,7 +293,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['钢琴', '古典音乐', '抹茶甜点', '花道'],
     dislikes: ['粗鲁的举止', '嘈杂'],
     specialEvents: [
-      { name: '演奏会的邀请', requireAffinity: 120, labelId: 'event_chihaya_concert' },
+      { name: '演奏会的邀请', requireAffinity: 12, labelId: 'event_chihaya_concert' },
     ],
   },
   {
@@ -340,7 +340,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['读书', '雨天', '星空', '无人的教室'],
     dislikes: ['人群', '引人注目'],
     specialEvents: [
-      { name: '角落的对话', requireAffinity: 200, labelId: 'event_sora_whisper' },
+      { name: '角落的对话', requireAffinity: 20, labelId: 'event_sora_whisper' },
     ],
   },
   {
@@ -373,7 +373,7 @@ export const CHARACTERS: CharacterConfig[] = [
     likes: ['摩托', '力量训练', '猫咪', '咖喱'],
     dislikes: ['伪善的人', '被误解'],
     specialEvents: [
-      { name: '不良的真相', requireAffinity: 180, labelId: 'event_masaki_truth' },
+      { name: '不良的真相', requireAffinity: 18, labelId: 'event_masaki_truth' },
     ],
   },
 ]

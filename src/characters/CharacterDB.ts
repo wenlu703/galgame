@@ -29,7 +29,7 @@ export type CharacterPersonality =
 /**
  * 角色关系状态
  */
-export type RelationshipStatus = '陌生人' | '相识' | '朋友' | '好友' | '亲密' | '恋人'
+export type RelationshipStatus = '陌生' | '初见' | '相识' | '相知' | '情感顶点'
 
 /**
  * 好感度阶段划分
@@ -43,12 +43,11 @@ export interface AffinityThreshold {
 
 /** 默认好感度阶段划分 */
 export const DEFAULT_AFFINITY_THRESHOLDS: AffinityThreshold[] = [
-  { name: '陌生人', value: 0 },
-  { name: '相识', value: 20 },
-  { name: '朋友', value: 50 },
-  { name: '好友', value: 100 },
-  { name: '亲密', value: 200 },
-  { name: '恋人', value: 350 },
+  { name: '陌生', value: 0 },
+  { name: '初见', value: 21 },
+  { name: '相识', value: 41 },
+  { name: '相知', value: 61 },
+  { name: '情感顶点', value: 81 },
 ]
 
 /**

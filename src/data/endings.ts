@@ -24,8 +24,8 @@ export function registerAllEndings(): void {
  * 判定逻辑（按优先级）：
  * 1. 隐藏结局 — 特殊复合条件
  * 2. True End — 好感度≥400 + 触发全部特殊事件
- * 3. Normal End — 好感度≥200
- * 4. 友情结局 — 兜底，无角色达到好感度≥200
+ * 3. Normal End — 好感度≥81
+ * 4. 友情结局 — 兜底，无角色达到好感度≥81
  */
 export const ENDINGS = [
   // ==================== 角色 True End（5 个） ====================

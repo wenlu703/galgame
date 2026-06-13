@@ -87,7 +87,7 @@ interface AffinityActions {
 
 /** 根据好感度数值计算关系阶段 */
 function calculateStatus(affinity: number, thresholds: AffinityThreshold[]): RelationshipStatus {
-  let status: RelationshipStatus = '陌生人'
+  let status: RelationshipStatus = '陌生'
   for (const t of thresholds) {
     if (affinity >= t.value) {
       status = t.name
@@ -113,7 +113,7 @@ export const useAffinityStore = create<AffinityState & AffinityActions>()(
             state.characterStates[id] = {
               characterId: id,
               affinity: 0,
-              status: '陌生人',
+              status: '陌生',
               isUnlocked: false,
               triggeredEvents: [],
               chatCount: 0,
@@ -131,7 +131,7 @@ export const useAffinityStore = create<AffinityState & AffinityActions>()(
         }
 
         const before = charState.affinity
-        const after = Math.max(0, Math.min(999, before + delta))
+        const after = Math.max(0, Math.min(100, before + delta))
         charState.affinity = after
         charState.status = calculateStatus(after, state.thresholds)
 
@@ -157,7 +157,7 @@ export const useAffinityStore = create<AffinityState & AffinityActions>()(
       set((state) => {
         const charState = state.characterStates[characterId]
         if (!charState) return
-        charState.affinity = Math.max(0, Math.min(999, value))
+        charState.affinity = Math.max(0, Math.min(100, value))
         charState.status = calculateStatus(charState.affinity, state.thresholds)
       }),
 
@@ -166,7 +166,7 @@ export const useAffinityStore = create<AffinityState & AffinityActions>()(
     },
 
     getRelationshipStatus: (characterId) => {
-      return get().characterStates[characterId]?.status ?? '陌生人'
+      return get().characterStates[characterId]?.status ?? '陌生'
     },
 
     markEventTriggered: (characterId, eventName) =>
@@ -243,7 +243,7 @@ export const useAffinityStore = create<AffinityState & AffinityActions>()(
       set((state) => {
         for (const charState of Object.values(state.characterStates)) {
           charState.affinity = 0
-          charState.status = '陌生人'
+          charState.status = '陌生'
           charState.isUnlocked = false
           charState.triggeredEvents = []
           charState.chatCount = 0

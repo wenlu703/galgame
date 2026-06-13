@@ -195,7 +195,7 @@ function evalCompare(left: string, op: ComparisonOp, right: number): boolean {
   if (relMatch) {
     const charId = relMatch[1]
     const charState = state.characterStates.get(charId)
-    const statusOrder = ['陌生人', '相识', '朋友', '好友', '亲密', '恋人']
+    const statusOrder = ['陌生', '初见', '相识', '相知', '情感顶点']
     const idx = charState ? statusOrder.indexOf(charState.status) : 0
     return compareValues(idx, op, right)
   }
