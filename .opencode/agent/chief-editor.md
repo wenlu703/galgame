@@ -225,6 +225,29 @@ Stage 5：峰值 8-10
 8. 单次分享8~15句，选项3次以内；冷酷型角色不允许颜文字
 9. NPC个人线每阶段必须包含消息+选择+剧情，三者齐全
 
+## Git版本控制规范
+
+> ⚠️ 项目已初始化git仓库。审核通过或任务完成后必须执行git commit。
+
+### 提交要求
+1. **审核通过后的最终版本必须commit**——确保评审通过的状态被记录
+2. **commit信息格式**：`[总编] {角色名}线{任务}: 评审通过/任务完成`
+3. **用户信息**（如未配置）：`git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "信息"`
+4. **PowerShell链式命令**使用 `;` 而非 `&&`
+5. **每次commit前**先执行 `git add -A`
+
+### 示例
+```
+git add -A
+git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "[总编] 花曦线Scene2: 三维度评审通过(综合8.7)"
+```
+
+### 禁止
+- ❌ 评审通过后不commit
+- ❌ commit信息不包含评审结果（评分/结论）
+
+---
+
 ## 输出格式
 
 任务调度时，输出以下结构：
