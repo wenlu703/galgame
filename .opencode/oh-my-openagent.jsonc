@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+
+  // ═══════════════════════════════════════════════════════════════
+  //  模型路由策略（GalGame 剧本创作优化 v3）
+  // ═══════════════════════════════════════════════════════════════
+  //
+  //  订购：OpenCode Go（额度有限，按需分配）
+  //
+  //  三位写手使用三个不同模型，确保评审视角多样性：
+  //    素心(DeepSeek V4 Pro) ≠ 墨骨(GLM 5.1) ≠ 白描(Qwen3.7 Max)
+  //
+  //  已验证秒回的模型：
+  //    opencode-go/qwen3.7-max    ✓ 12s (ultrabrain)
+  //    opencode-go/deepseek-v4-pro ✓ 10s (unspecified-high)
+  //    opencode-go/glm-5.1        ✓ 3s  (artistry)
+  //    opencode-go/mimo-v2.5      ✓ (explore)
+  //    opencode-go/minimax-m3     ✓ (momus)
+  //    opencode/deepseek-v4-flash-free ✓ (quick)
+
+  "agents": {
+    // ── 架构/调试顾问 ── Qwen3.7 Max（旗舰推理）
+    "oracle":     { "model": "opencode-go/qwen3.7-max", "variant": "high" },
+
+    // ── 代码探索 ── MiMo V2.5（轻量快速）
+    "explore":    { "model": "opencode-go/mimo-v2.5", "variant": "low" },
+    "librarian":  { "model": "opencode-go/mimo-v2.5", "variant": "low" },
+
+    // ── 计划评审 ── MiniMax M3
+    "momus":      { "model": "opencode-go/minimax-m3", "variant": "medium" },
+    "metis":      { "model": "opencode-go/minimax-m3", "variant": "medium" }
+  },
+
+  "categories": {
+    // ── 素心（情感细腻度·内心戏）→ DeepSeek V4 Pro
+    "unspecified-high":   { "model": "opencode-go/deepseek-v4-pro" },
+
+    // ── 墨骨（戏剧张力·冲突结构）→ GLM 5.1
+    "artistry":           { "model": "opencode-go/glm-5.1", "variant": "medium" },
+
+    // ── 白描（日常真实感·台词）→ Qwen3.7 Max（测试对比用）
+    "ultrabrain":         { "model": "opencode-go/qwen3.7-max", "variant": "high" },
+
+    // ── 深度推理
+    "deep":               { "model": "opencode-go/qwen3.7-max", "variant": "high" },
+
+    // ── 快速轻量
+    "quick":              { "model": "opencode/deepseek-v4-flash-free" },
+    "unspecified-low":    { "model": "opencode/mimo-v2.5-free" },
+    "visual-engineering": { "model": "opencode-go/mimo-v2.5", "variant": "medium" }
+  }
+}

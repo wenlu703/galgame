@@ -1,0 +1,11 @@
+{
+  "plugin": ["oh-my-openagent@latest"],
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "sisyphus",
+  "model": "opencode/deepseek-v4-flash-free",
+  "agent": {
+    "sisyphus": {
+      "mode": "primary"
+    }
+  }
+}

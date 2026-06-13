@@ -1,0 +1,20 @@
+{
+  "name": "星空协奏曲 — Starlight Concerto",
+  "short_name": "星空协奏曲",
+  "description": "一款恋爱模拟视觉小说 Galgame，支持手机和电脑双端游玩。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+
+  // ════════════════════════════════════════════════════
+  //  模型路由策略：同一份代码 → 5个不同模型交叉分析
+  // ════════════════════════════════════════════════════
+  //
+  //  DeepSeek V4 Flash    → 编排 + 最难推理
+  //  Nemotron 3 Super     → 深度架构分析（不同推理风格）
+  //  Big Pickle           → 创造性/非传统分析
+  //  MiniMax M3           → 评审/规划/文档
+  //  MiMo V2.5            → 搜索/轻量任务
+  //
+  //  模型名请用 /models 命令确认实际 ID，如果不一样就改这里
+
+  "agents": {
+    // ── 总编排器 ── DeepSeek V4 Flash
+    //    任务分解、全局调度、最终决策
+    "sisyphus":   { "model": "opencode/deepseek-v4-flash-free", "variant": "high" },
+
+    // ── 架构/调试顾问 ── Nemotron 3 Super
+    //    与 Sisyphus 不同的推理引擎，提供不一样的架构视角
+    "oracle":     { "model": "opencode/nemotron-3-super-free", "variant": "high" },
+
+    // ── 代码探索 ── MiMo V2.5
+    "explore":    { "model": "opencode/mimo-v2.5-free", "variant": "low" },
+
+    // ── 外部文档研究 ── MiMo V2.5
+    "librarian":  { "model": "opencode/mimo-v2.5-free", "variant": "low" },
+
+    // ── 计划评审 ── MiniMax M3
+    "momus":      { "model": "opencode/minimax-m3-free", "variant": "medium" },
+
+    // ── 预规划分析 ── MiniMax M3
+    "metis":      { "model": "opencode/minimax-m3-free", "variant": "medium" }
+  },
+
+  "categories": {
+    "quick":              { "model": "opencode/mimo-v2.5-free" },
+    "writing":            { "model": "opencode/minimax-m3-free" },
+    "unspecified-low":    { "model": "opencode/mimo-v2.5-free" },
+
+    // 重度推理 → 分散到 3 个不同模型，每次可能拿到不同角度的分析
+    "unspecified-high":   { "model": "opencode/deepseek-v4-flash-free" },
+    "deep":               { "model": "opencode/nemotron-3-super-free", "variant": "high" },
+    "ultrabrain":         { "model": "opencode/deepseek-v4-flash-free", "variant": "high" },
+
+    // 前端视觉 → MiMo V2.5（多模态能力）
+    "visual-engineering": { "model": "opencode/mimo-v2.5-free", "variant": "medium" },
+
+    // 创造性任务 → Big Pickle（stealth 模型，适合非传统思路）
+    "artistry":           { "model": "opencode/big-pickle", "variant": "medium" }
+  }
+}
