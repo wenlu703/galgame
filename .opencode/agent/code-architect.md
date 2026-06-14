@@ -141,25 +141,13 @@ interface StoryScene {
 
 ## Git版本控制规范
 
-> ⚠️ 项目已初始化git仓库。每次代码修改后必须执行git commit，确保可回滚。
+> 通用Git规范见：`_shared/git-conventions.md`
 
-### 提交要求
-1. **每次功能实现/Bug修复后必须commit**——原子提交，一个功能一个commit
-2. **commit信息格式**：`[代码架构师] {功能/Bug}: 简述`
-3. **用户信息**（如未配置）：`git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "信息"`
-4. **PowerShell链式命令**使用 `;` 而非 `&&`
-5. **每次commit前**先执行 `git add -A`
-
-### 示例
-```
-git add -A
-git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "[代码架构师] 修复: 选项面板在移动端溢出"
-```
-
-### 禁止
-- ❌ 修改代码后不commit
-- ❌ 一个commit包含多个不相关的改动
-- ❌ commit信息不包含改动类型（feat/fix/refactor/docs）
+### 本角色专用规则
+- **commit前缀**：`[代码架构师]`
+- **commit信息格式**：`[代码架构师] {功能/Bug}: 简述`
+- **示例**：`[代码架构师] 修复: 选项面板在移动端溢出`
+- **额外要求**：原子提交，一个功能一个commit；commit信息须包含改动类型（feat/fix/refactor/docs）
 
 ---
 

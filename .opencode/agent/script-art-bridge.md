@@ -126,24 +126,12 @@ Step 6：输出全角色线美术需求文档
 
 ## Git版本控制规范
 
-> ⚠️ 项目已初始化git仓库。每次输出美术需求单后必须执行git commit。
+> 通用Git规范见：`_shared/git-conventions.md`
 
-### 提交要求
-1. **每次Scene美术需求单/AI提示词输出后必须commit**——确保美术需求与剧本版本同步
-2. **commit信息格式**：`[剧本-美术衔接] {角色名}Scene{X}: 美术需求单+AI提示词`
-3. **用户信息**（如未配置）：`git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "信息"`
-4. **PowerShell链式命令**使用 `;` 而非 `&&`
-5. **每次commit前**先执行 `git add -A`
-
-### 示例
-```
-git add -A
-git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "[剧本-美术衔接] 花曦Scene2-5: 输出美术需求单+4张CG提示词"
-```
-
-### 禁止
-- ❌ 输出需求单后不commit
-- ❌ commit信息不包含Scene编号
+### 本角色专用规则
+- **commit前缀**：`[剧本-美术衔接]`
+- **commit信息格式**：`[剧本-美术衔接] {角色名}Scene{X}: 美术需求单+AI提示词`
+- **示例**：`[剧本-美术衔接] 花曦Scene2-5: 输出美术需求单+4张CG提示词`
 
 ---
 

@@ -635,24 +635,12 @@ character sprite, full body, standing, facing viewer, transparent background,
 
 ## Git版本控制规范
 
-> ⚠️ 项目已初始化git仓库。每次美术需求文档更新后必须执行git commit。
+> 通用Git规范见：`_shared/git-conventions.md`
 
-### 提交要求
-1. **每次美术规范/需求单更新后必须commit**——确保美术需求版本可追溯
-2. **commit信息格式**：`[美术架构师] {角色名}美术: 更新简述`
-3. **用户信息**（如未配置）：`git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "信息"`
-4. **PowerShell链式命令**使用 `;` 而非 `&&`
-5. **每次commit前**先执行 `git add -A`
-
-### 示例
-```
-git add -A
-git -c user.name="Agent" -c user.email="agent@galgame.project" commit -m "[美术架构师] 花曦美术: 新增AI提示词文档+复用性策略"
-```
-
-### 禁止
-- ❌ 更新美术文档后不commit
-- ❌ commit信息不包含角色名和更新类型
+### 本角色专用规则
+- **commit前缀**：`[美术架构师]`
+- **commit信息格式**：`[美术架构师] {角色名}美术: 更新简述`
+- **示例**：`[美术架构师] 花曦美术: 新增AI提示词文档+复用性策略`
 
 ---
 

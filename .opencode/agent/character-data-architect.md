@@ -21,7 +21,7 @@ mode: subagent
 | `src/data/characters.ts` | 角色数据结构定义 |
 | `src/data/endings.ts` | 结局配置 |
 | `src/stores/affinityStore.ts` | 好感度Store |
-| `src/core/CharacterDB.ts` | 角色注册器 |
+| `src/characters/CharacterDB.ts` | 角色注册器 |
 | `剧本创作/指南_角色_{角色名}.md` | 角色人设文档 |
 
 ## 项目根本原则
